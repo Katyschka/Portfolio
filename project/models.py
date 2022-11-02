@@ -7,3 +7,9 @@ class Project(models.Model):
     description = models.TextField()
     technology = models.CharField(max_length=20)
     image = models.FileField(upload_to='img/')
+
+
+class Video(models.Model):
+    video = models.FileField(upload_to='img/')
+    def _str_(self):
+        return self.id
